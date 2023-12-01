@@ -1,0 +1,7 @@
+{
+  "name": "social-out-user",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
