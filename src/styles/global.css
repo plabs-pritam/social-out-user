@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*::-webkit-scrollbar{
+  width: 0px;
+  height: 0px;
+}
+
+*{
+  font-family: 'SF Pro Display', sans-serif;
+  scrollbar-width: none;
+}
+
+.gradient-divider {
+  height: 1px;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #8f8f8f 0%,
+    rgba(80, 28, 28, 0) 100%
+  );
+  /* margin : 20px auto; */
+}
+
+.online-dot {
+  height: 6px;
+  width: 6px;
+  background-color: var(--ion-color-primary);
+  display: inline-block;
+  border-radius: 50%;
+}
+
+/* typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+/* buttons */
+.ion-btn-primary {
+  text-transform: capitalize;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.quickBall {
+  box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.guide-list > li {
+  width: 100%;
+}
+
+.create-community-form .input {
+  border-radius: 8px;
+  border: 1px solid #e3e8ef;
+  background: #fff;
+}
+
+.community-created {
+  box-shadow: 0px 8px 8px -4px rgba(16, 24, 40, 0.04),
+    0px 20px 24px -4px rgba(16, 24, 40, 0.1);
+}
+
+.post-option-modal {
+  --border-radius: 30px;
+}
+
+ion-button.icon-btn {
+  height: auto;
+}
+
+ion-button.icon-btn::part(native) {
+  padding: 0px;
+  height: auto;
+}
+
+ion-button.event-intrested-btn::part(native) {
+  padding: 6px 12px;
+  height: auto;
+}
+
+ion-button.follow-btn::part(native) {
+  padding: 6px 12px;
+  height: auto;
+}
+
+ion-button.schedule-btn::part(native) {
+  padding: 0px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
