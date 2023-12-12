@@ -7,7 +7,6 @@ import { IonAvatar, IonImg, IonText } from '@ionic/react';
 import {setSelectedEvents} from '../../../store/reducer/event-group'
 import EventList from './EventList';
 import { Avatar } from '@mui/material';
-import EventOverview from './EventOverview';
 
 interface ChatsProps {
   searchInput: string;
@@ -126,15 +125,20 @@ return (
  <div className="mt-[20px]">
       {eventdata.map((event: any) => (
         <>
-        <div className=" ">
-        <EventOverview
-          id={'Chat'}
-          userId={friend.id}
-          profileDetail={friend}
-          key={Math.random() * 100}
-          selectedUser={selectedUser}
-          navigationElement={handleNavigation}
-        />
+        <div className="flex flex-row justify-between -mb-[20px] p-4 ">
+        <div className=" flex flex-row gap-2">
+              {event.logo ? (
+                  <IonImg src={event.logo} />
+              ) : (
+                <Avatar src='avatar' alt={event.name} size='medium'/>
+              )}   
+          <div className="flex flex-col">
+          <IonText className="text-black text-lg">{event.name}</IonText>
+          <IonText className="text-zinc-500 text-xs">{event.lastMessage}</IonText>  
+          </div>
+        </div>
+        <IonText className=" text-zinc-500 text-xs mt-[12px]">{event.time}</IonText>
+  
         </div>
         </>
       ))}
